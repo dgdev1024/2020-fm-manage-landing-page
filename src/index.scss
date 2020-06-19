@@ -1,1 +1,147 @@
 @import "./global.scss";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.main {
+  font-family: $font-family-normal;
+  font-size: $font-size-normal;
+  font-weight: $font-weight-normal;
+}
+
+.container {
+  width: 95%;
+  margin: 0px auto;
+
+  @media #{$screen-medium} {
+    width: 90%;
+  }
+
+  @media #{$screen-large} {
+    width: 85%;
+  }
+
+  @media #{$screen-extra-large} {
+    width: 80%;
+  }
+}
+
+.heading {
+  font-size: 1em;
+  font-weight: $font-weight-bold;
+  line-height: 1.3em;
+  text-align: center;
+
+  &--large {
+    font-size: 3em;
+  }
+
+  &--medium {
+    font-size: 2em;
+  }
+
+  &--small {
+    font-size: 1em;
+  }
+
+  &--align-left {
+    text-align: left;
+
+    &-on-desktop {
+      text-align: center;
+
+      @media #{$screen-medium} {
+        text-align: left;
+      }
+    }
+  }
+
+  &--align-right {
+    text-align: right;
+
+    &-on-desktop {
+      text-align: center;
+
+      @media #{$screen-medium} {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.text {
+  color: $color-dark-grayish-blue;
+  line-height: 1.3em;
+  text-align: center;
+
+  &--small {
+    font-size: 0.9em;
+  }
+
+  &--smaller {
+    font-size: 0.8em;
+  }
+
+  &--align-left {
+    text-align: left;
+
+    &-on-desktop {
+      text-align: center;
+
+      @media #{$screen-medium} {
+        text-align: left;
+      }
+    }
+  }
+
+  &--align-right {
+    text-align: right;
+
+    &-on-desktop {
+      text-align: center;
+
+      @media #{$screen-medium} {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.button {
+  display: block;
+  transition: $time-transition;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--orange {
+    padding: 8px 16px;
+    background-color: $color-bright-red;
+    color: $color-very-light-gray;
+    font-weight: $font-weight-medium;
+    border-radius: 32px;
+
+    &:hover {
+      background-color: $color-bright-red-hover;
+      color: $color-very-light-gray-hover;
+    }
+  }
+
+  &--white {
+    padding: 8px 16px;
+    color: $color-bright-red;
+    background-color: $color-very-light-gray;
+    font-weight: $font-weight-medium;
+    border-radius: 32px;
+
+    &:hover {
+      color: $color-bright-red-hover;
+      background-color: $color-very-light-gray-hover;
+    }
+  }
+}
