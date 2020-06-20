@@ -70,6 +70,10 @@
     border: 1px solid $color-very-dark-blue;
     border-radius: 32px;
 
+    &:focus {
+      outline: none;
+    }
+
     &--error {
       border-color: $color-bright-red;
     }
