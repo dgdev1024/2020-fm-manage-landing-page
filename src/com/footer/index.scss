@@ -1,7 +1,7 @@
 @import "../../global.scss";
 
 .footer {
-  padding: 32px 0px;
+  padding: 64px 0px;
   background-color: $color-very-dark-blue;
 
   &__container {
@@ -18,11 +18,15 @@
     justify-items: center;
 
     @media #{$screen-large} {
-      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-columns: auto 240px auto;
       grid-template-rows: repeat(2, 1fr);
       grid-template-areas:
         "logo   links subscribe"
         "social links copyright";
+    }
+
+    @media #{$screen-extra-large} {
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 

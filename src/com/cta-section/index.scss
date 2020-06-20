@@ -1,0 +1,33 @@
+@import "../../global.scss";
+
+.cta {
+  background-image: url("../../img/bg-simplify-section-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-color: $color-bright-red;
+  color: $color-very-light-gray;
+
+  @media #{$screen-medium} {
+    background-image: url("../../img/bg-simplify-section-desktop.svg");
+    background-position: right center;
+  }
+
+  &__container {
+    padding: 96px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media #{$screen-medium} {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__heading {
+    @media #{$screen-medium} {
+      padding-bottom: 0px !important;
+    }
+  }
+}
