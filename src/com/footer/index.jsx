@@ -99,6 +99,8 @@ const Footer = () => {
           <a
             href="#"
             className="footer__social-link footer__social-link--facebook"
+            aria-label="Facebook"
+            title="Facebook"
           >
             <IconFacebook
               className="footer__social-link-svg"
@@ -108,6 +110,8 @@ const Footer = () => {
           <a
             href="#"
             className="footer__social-link footer__social-link--youtube"
+            aria-label="YouTube"
+            title="YouTube"
           >
             <IconYoutube
               className="footer__social-link-svg"
@@ -117,6 +121,8 @@ const Footer = () => {
           <a
             href="#"
             className="footer__social-link footer__social-link--twitter"
+            aria-label="Twitter"
+            title="Twitter"
           >
             <IconTwitter
               className="footer__social-link-svg"
@@ -126,6 +132,8 @@ const Footer = () => {
           <a
             href="#"
             className="footer__social-link footer__social-link--pinterest"
+            aria-label="Pinterest"
+            title="Pinterest"
           >
             <IconPinterest
               className="footer__social-link-svg"
@@ -135,6 +143,8 @@ const Footer = () => {
           <a
             href="#"
             className="footer__social-link footer__social-link--instagram"
+            aria-label="Instagram"
+            title="Instagram"
           >
             <IconInstagram
               className="footer__social-link-svg"
