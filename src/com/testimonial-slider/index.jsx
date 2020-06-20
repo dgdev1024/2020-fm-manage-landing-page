@@ -2,13 +2,27 @@
  * @file com/testimonial-slider/index.jsx
  */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Testimonial from "../testimonial";
 import { clamp } from "../../lib/clamp";
 import "./index.scss";
 
 const TestimonialSlider = ({ testimonials = [] } = {}) => {
   const [page, setPage] = useState(0);
+
+  useEffect(() => {
+    let interval = null;
+    interval = setInterval(() => {
+      let next = page + 1;
+      if (next >= testimonials.length) {
+        next = 0;
+      }
+
+      gotoPage(next);
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, [page]);
 
   const gotoPage = (pageNumber) => {
     pageNumber = clamp(pageNumber, 0, testimonials.length - 1);
@@ -39,7 +53,7 @@ const TestimonialSlider = ({ testimonials = [] } = {}) => {
             `}
             aria-label={`Go to Testimonial Number ${index + 1}`}
             disabled={index === page}
-            onClick={() => setPage(index)}
+            onClick={() => gotoPage(index)}
           />
         ))}
       </div>

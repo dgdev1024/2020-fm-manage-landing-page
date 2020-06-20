@@ -15,7 +15,7 @@
   border-radius: 8px;
 
   transition-property: left;
-  transition-duration: $time-transition;
+  transition-duration: $time-transition-slow;
 
   @media #{$screen-medium} {
     min-width: calc(100% - 64px);
