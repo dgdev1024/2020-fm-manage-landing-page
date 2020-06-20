@@ -1,0 +1,133 @@
+@import "../../global.scss";
+
+.header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 64px,
+    $color-transparent-dark-blue 100%,
+    transparent 120%
+  );
+  z-index: 1;
+
+  @media #{$screen-large} {
+    background-image: none;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 64px auto;
+    grid-template-areas: "logo toggle" "nav nav";
+
+    @media #{$screen-medium} {
+      grid-template-columns: auto 160px auto;
+      grid-template-areas: "logo cta toggle" "nav nav nav";
+    }
+
+    @media #{$screen-large} {
+      grid-template-columns: auto auto auto;
+      grid-template-rows: 96px;
+      grid-template-areas: "logo nav cta";
+    }
+  }
+
+  &__image {
+    grid-area: logo;
+    align-self: center;
+    justify-self: start;
+  }
+
+  &__button {
+    grid-area: toggle;
+    align-self: center;
+    justify-self: end;
+    width: 48px;
+    height: 48px;
+    background-image: url("../../img/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+
+    @media #{$screen-large} {
+      display: none !important;
+    }
+  }
+
+  &__nav {
+    grid-area: nav;
+    height: 0px;
+    margin-top: 0px;
+    overflow: hidden;
+
+    transition-property: height, margin-top;
+    transition-duration: $time-transition;
+
+    &--shown {
+      height: calc(100vh - 64px);
+      margin-top: 32px;
+    }
+
+    @media #{$screen-large} {
+      align-self: center;
+      justify-self: center;
+      height: auto;
+      margin-top: 0px;
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    padding: 12px 0px;
+    text-align: center;
+    text-decoration: none;
+    color: $color-dark-blue;
+    background-color: $color-very-light-gray;
+    transition: $time-transition;
+
+    &:hover {
+      color: $color-dark-grayish-blue;
+    }
+
+    &:first-child {
+      padding-top: 24px;
+      border-radius: 8px 8px 0px 0px;
+    }
+
+    &:last-child {
+      padding-bottom: 24px;
+      border-radius: 0px 0px 8px 8px;
+    }
+
+    @media #{$screen-large} {
+      display: inline-block;
+      width: auto;
+      padding: 8px;
+      background-color: transparent;
+    }
+
+    @media #{$screen-extra-large} {
+      padding: 12px;
+    }
+  }
+
+  &__cta-button {
+    grid-area: cta;
+    display: none !important;
+
+    @media #{$screen-medium} {
+      display: block !important;
+      justify-self: center;
+      align-self: center;
+    }
+
+    @media #{$screen-large} {
+      justify-self: end;
+    }
+  }
+}

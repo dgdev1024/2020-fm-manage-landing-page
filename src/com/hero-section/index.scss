@@ -1,0 +1,44 @@
+@import "../../global.scss";
+
+.hero {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "image" "caption";
+    gap: 32px;
+    margin: 96px auto 64px !important;
+
+    @media #{$screen-medium} {
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "caption image";
+      align-items: center;
+    }
+  }
+
+  &__image {
+    grid-area: image;
+    width: 100%;
+    max-width: 400px;
+    margin: 0px auto;
+
+    @media #{$screen-medium} {
+      max-width: 600px;
+    }
+  }
+
+  &__caption {
+    grid-area: caption;
+  }
+
+  &__text {
+    padding-bottom: 32px !important;
+  }
+
+  &__button {
+    margin: 0px auto;
+
+    @media #{$screen-medium} {
+      margin: 0px;
+    }
+  }
+}

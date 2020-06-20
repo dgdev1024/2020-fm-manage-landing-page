@@ -1,0 +1,55 @@
+@import "../../global.scss";
+
+.why {
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 32px;
+    padding: 48px 0px;
+
+    @media #{$screen-medium} {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__feature-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__feature-heading {
+    display: flex;
+    align-items: center;
+    margin: 8px -20% 8px 0px;
+    background-color: $color-very-pale-red;
+    border-radius: 32px 0px 0px 32px;
+    overflow: hidden;
+
+    @media #{$screen-medium} {
+      background-color: transparent;
+    }
+  }
+
+  &__feature-heading-badge {
+    margin-right: 24px;
+    padding: 12px 24px;
+    font-weight: $font-weight-bold;
+    background-color: $color-bright-red;
+    color: $color-very-light-gray;
+    border-radius: 0px 32px 32px 0px;
+  }
+
+  &__feature-heading-text {
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+  }
+
+  &__feature-text {
+    @media #{$screen-medium} {
+      margin-left: 91px;
+    }
+  }
+}
