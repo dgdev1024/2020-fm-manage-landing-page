@@ -39,14 +39,44 @@
 
   &--large {
     font-size: 2.25em;
+
+    @media #{$screen-medium} {
+      font-size: 2.5em;
+    }
+    @media #{$screen-large} {
+      font-size: 2.75em;
+    }
+    @media #{$screen-extra-large} {
+      font-size: 3em;
+    }
   }
 
   &--medium {
     font-size: 1.75em;
+
+    @media #{$screen-medium} {
+      font-size: 2em;
+    }
+    @media #{$screen-large} {
+      font-size: 2.25em;
+    }
+    @media #{$screen-extra-large} {
+      font-size: 2.5em;
+    }
   }
 
   &--small {
     font-size: 1.25em;
+
+    @media #{$screen-medium} {
+      font-size: 1.5em;
+    }
+    @media #{$screen-large} {
+      font-size: 1.75em;
+    }
+    @media #{$screen-extra-large} {
+      font-size: 2em;
+    }
   }
 
   &--align-left {
@@ -76,7 +106,7 @@
 
 .text {
   color: $color-dark-grayish-blue;
-  line-height: 1.3em;
+  line-height: 1.7em;
   text-align: center;
 
   &--small {

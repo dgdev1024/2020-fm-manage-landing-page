@@ -9,7 +9,7 @@
 
   @media #{$screen-medium} {
     background-image: url("../../img/bg-simplify-section-desktop.svg");
-    background-position: right center;
+    background-position: center;
   }
 
   &__container {
@@ -28,6 +28,12 @@
   &__heading {
     @media #{$screen-medium} {
       padding-bottom: 0px !important;
+    }
+  }
+
+  &__button {
+    @media #{$screen-medium} {
+      width: 160px;
     }
   }
 }
